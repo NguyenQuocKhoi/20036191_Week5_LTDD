@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { StyleSheet, Text, View, Image, Pressable, TouchableOpacity, Animated } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator} from "@react-navigation/native-stack";;
