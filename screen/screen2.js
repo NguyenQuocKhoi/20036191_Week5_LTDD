@@ -4,12 +4,19 @@ import React, { useEffect, useState } from "react";
 
 function Screen2({navigation}){
     var[image, setImage] = useState(require('../assets/img/vs_blue.png'))
+    var[text, setText] = useState("Blue")
     return (
         <View style={styles.container}>
             <View style={styles.header}>
                 <Image source={image} style={styles.img}></Image>
+                <View>
                 <Text style={styles.text}>Điện Thoại Vsmart Joy 3{"\n"}
                     Hàng chính hãng</Text>
+                    <Text style={styles.text1}>Màu:{text}</Text> 
+                    <Text style={styles.text1}>Cung cấp bởi Tiki Tradding</Text> 
+                    <Text style={styles.text1}>1.790.000đ</Text> 
+            </View>
+            
             </View>
 
             <View style={styles.content}> 
@@ -17,19 +24,23 @@ function Screen2({navigation}){
                 <Pressable style={{ width: '85px', height: '80px', backgroundColor: '#C5F1FB', margin: '5px' }}
                 
                 onPress={()=>{
-                    setImage(require('../assets/img/vs_silver.png'))
+                    setImage(require('../assets/img/vs_silver.png')),
+                    setText("Silver")
                 }}></Pressable>
                 <Pressable style={{ width: '85px', height: '80px', backgroundColor: '#F30D0D', margin: '5px' }}
                    onPress={()=>{
-                    setImage(require('../assets/img/vs_red.png'))
+                    setImage(require('../assets/img/vs_red.png')),
+                    setText("Red")
                 }}></Pressable>
                 <Pressable style={{ width: '85px', height: '80px', backgroundColor: '#000000', margin: '5px' }}
                    onPress={()=>{
-                    setImage(require('../assets/img/vs_black.png'))
+                    setImage(require('../assets/img/vs_black.png')),
+                    setText("Black")
                 }}></Pressable>
                 <Pressable style={{ width: '85px', height: '80px', backgroundColor: '#234896', margin: '5px' }}
                    onPress={()=>{
-                    setImage(require('../assets/img/vs_blue.png'))
+                    setImage(require('../assets/img/vs_blue.png')),
+                    setText("BLue")
                 }}></Pressable>
 
                  <TouchableOpacity onPress={()=>{
@@ -59,6 +70,14 @@ const styles = StyleSheet.create({
     },
 
     text: {
+        fontFamily: 'roboto',
+        fontWeight: '400',
+        fontSize: '15px',
+        lineHeight: '17.58px',
+        marginTop: '10px',
+        marginLeft: '10px',
+    },
+    text1:{
         fontFamily: 'roboto',
         fontWeight: '400',
         fontSize: '15px',

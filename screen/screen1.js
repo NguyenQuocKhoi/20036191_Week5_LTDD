@@ -55,6 +55,7 @@ function Screen1({ route, navigation }) {
       <TouchableOpacity onPress={()=>navigation.navigate("Screen2")}>
         <View style={styles.btnContainer}>
           <Text style={styles.btnText}>4 MÀU-CHỌN MÀU{"     "}</Text>
+          <Image style={styles.img2} source={require('../assets/img/angle-right.png')}></Image>
         </View>
       </TouchableOpacity>
       <View style={styles.btn}>
@@ -136,7 +137,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "center",
-    justifyContent: "space-around",
+    right: '45px',
   },
 
   text5: {
@@ -153,6 +154,8 @@ const styles = StyleSheet.create({
     borderWidth: "0.5px",
     borderRadius: "20px",
     textAlign: "center",
+    left:'10px',
+    marginTop: '-5px'
   },
 
   btnContainer: {
@@ -164,6 +167,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     justifyContent: "center",
     marginBottom: "20px",
+    flexDirection: 'row',
   },
 
   btnText: {
@@ -172,6 +176,8 @@ const styles = StyleSheet.create({
     fontSize: "15px",
     lineHeight: "17.58px",
     textAlign: "center",
+    justifyContent: 'center',
+    
   },
 
   btn: {
@@ -193,5 +199,13 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#F9F2F2",
   },
+
+  img2:{
+    height:'14px',
+    width:'11.5px',
+    color:'rgba(0, 0, 0, 1)',
+    position:'absolute',
+    marginLeft: '250px'
+  }
 });
 export default Screen1;
